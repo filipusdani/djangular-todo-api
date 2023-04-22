@@ -11,3 +11,10 @@ class Todo(models.Model):
  
     def __str__(self) -> str:
         return self.task
+    
+class TodoCategory(models.Model):
+    tag = models.CharField(max_length=3)
+    name = models.CharField(max_length=255)
+
+    def __str__(self) -> str:
+        return self.tag
