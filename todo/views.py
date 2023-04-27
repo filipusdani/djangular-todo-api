@@ -23,9 +23,9 @@ class ListCreateTodoAPIView(ListCreateAPIView):
                 field_names.append(field_name)
             return Response({'error': f'Invalid data in {field_names}'}, status=status.HTTP_400_BAD_REQUEST)
         
-class RetrieveUpdateDestroyTodoCategoryAPIView(RetrieveUpdateDestroyAPIView):
-    serializer_class = TodoCategorySerializer
-    queryset = TodoCategory.objects.all()
+class RetrieveUpdateDestroyTodoAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = TodoSerializer
+    queryset = Todo.objects.all()
 
 class ListCreateTodoCategoryAPIView(ListCreateAPIView):
     serializer_class = TodoCategorySerializer
@@ -45,6 +45,6 @@ class ListCreateTodoCategoryAPIView(ListCreateAPIView):
                 field_names.append(field_name)
             return Response({'error': f'Invalid data in {field_names}'}, status=status.HTTP_400_BAD_REQUEST)
         
-class RetrieveUpdateDestroyTodoAPIView(RetrieveUpdateDestroyAPIView):
+class RetrieveUpdateDestroyTodoCategoryAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = TodoCategorySerializer
     queryset = TodoCategory.objects.all()

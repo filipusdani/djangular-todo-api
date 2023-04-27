@@ -12,7 +12,7 @@ class TodoSerializer(serializers.ModelSerializer):
             'category',
             'due_date',
             'status',
-            'order'
+            'order',
         )
 
 class TodoCategorySerializer(serializers.ModelSerializer):
